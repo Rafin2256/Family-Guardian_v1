@@ -3,16 +3,55 @@
 <head>
     <title>Family Guardian</title>
     <link rel="stylesheet" href="/style.css">
+    <!-- PWA Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4dabf7"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+<!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
 </head>
 <body>
-    <h1>Family Guardian</h1>
-    
-    <!-- Emergency Button -->
-    <button id="emergencyBtn">🚨 EMERGENCY</button>
-    
-    <!-- Message Checker -->
-    <textarea id="messageInput"></textarea>
-    <button onclick="checkMessage()">Check Message</button>
+    <header>
+        <h1>Family Guardian</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/dashboard">Family Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Welcome</h2>
+            <p>Type a message you received. We'll check if it looks risky. Press Emergency to alert family.</p>
+        </section>
+
+        <section class="card">
+            <h2>Your message</h2>
+            <textarea id="messageInput" placeholder='Example: "Your account is suspended. Click to fix."'></textarea>
+
+            <div class="row" style="margin-top:12px;">
+                <!-- JS worj -->
+                <button class="btn btn-primary" onclick="checkMessage()">Check Message</button>
+
+                <!-- Call Family button -->
+                <button class="btn btn-emergency" id="emergencyBtn">Call Family</button>
+            </div>
+
+            <!--  JS writes  -->
+            <div id="result" class="result-message" aria-live="polite" style="margin-top:10px;"></div>
+        </section>
+
+        <section class="card">
+            <h2>Safety Lessons</h2>
+            <p>Learn how to protect yourself from scams and fraud</p>
+            <a class="btn btn-outline" href="/micro-lessons" style="width: 90%; text-align: center;">📚 Learn About Scams</a>
+        </section>
+    </main>
     
     <script src="/script.js"></script>
 </body>

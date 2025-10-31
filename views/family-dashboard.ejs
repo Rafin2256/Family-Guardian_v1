@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Family Dashboard - Family Guardian</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- PWA Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4dabf7"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+</head>
+<body>
+    <header>
+        <h1>Family Guardian</h1>
+        <nav>
+            <a href="/">Senior Interface</a>
+            <a href="/dashboard">Family Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Family Dashboard</h2>
+            <p>Monitor and protect your loved one</p>
+        </section>
+
+        <section class="card">
+            <h3>Recent Alerts</h3>
+            <div id="alertsContainer">
+                <p>No alerts yet. Alerts will appear here when your family member finds suspicious messages.</p>
+            </div>
+            <button onclick="loadAlerts()" class="btn btn-primary">Refresh Alerts</button>
+        </section>
+
+        <section class="card">
+            <h3>Safe Contacts</h3>
+            <div id="safeContactsContainer">
+                <p>Dr. Smith: phone: +441555010122</p>
+                <p>Daughter Amy: phone: +442555010222</p>
+                <p>Local Pharmacy: phone: +442555010222</p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Rafin2256/Family-Guardian_v1#readme",
   "description": "",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^5.1.0"
   }
 }
